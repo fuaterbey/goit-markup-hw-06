@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Sixth Homework - Flexbox</title>
+    <title>Sixth Homework</title>
 
     <link
       rel="stylesheet"
@@ -26,142 +26,7 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
-    <!-- Mobile menü kodları buradan başlar. -->
-    <div class="mobile-menu">
-      <input type="checkbox" id="mobile-menu-toggle" hidden />
-      <p class="mobile-menu-logo">Logo</p>
-      <label for="mobile-menu-toggle" class="menu-button">
-        <svg class="icon hamburger">
-          <use
-            xlink:href="symbol-defs-mobile-menu.svg#icon-hamburger"
-          ></use>
-        </svg>
-      </label>
-
-      <nav class="mobile-nav">
-        <label for="mobile-menu-toggle" class="menu-close">
-          <svg class="icon close-mobile-menu">
-            <use
-              xlink:href="symbol-defs-mobile-menu.svg#icon-close-mobile-menu"
-            ></use>
-          </svg>
-        </label>
-        <ul>
-          <li>Studio</li>
-          <li>Portfolio</li>
-          <li>Contacts</li>
-        </ul>
-      </nav>
-    </div>
-
-    <!-- Mobile menü kodları burada biter. -->
-
-    <!-- Modal (pop-up) kodları buradan itibaren başlar. -->
-
-    <div class="modal">
-      <div class="modal-content">
-        <div class="form-closing">
-          <svg class="form-close-icon">
-            <use
-              xlink:href="./images/symbol-defs-form.svg#icon-form-close-icon"
-            ></use>
-          </svg>
-        </div>
-
-        <h2 class="baslik-modal">
-          Leave your contacts and we will call you back
-        </h2>
-
-        <form class="form" name="contact_form" autocomplete="off">
-          <label class="form-label" name="user-name">
-            <span class="label-text">Name</span>
-
-            <input
-              class="form-input"
-              type="text"
-              name="user-name"
-              autofocus
-            />
-
-            <svg class="form-name-icon">
-              <use
-                xlink:href="./images/symbol-defs-form.svg#icon-form-name-icon"
-              ></use>
-            </svg>
-          </label>
-
-          <label class="form-label" name="user-phone">
-            <span class="label-text">Phone</span>
-            <input class="form-input" type="tel" name="user-phone" />
-
-            <svg class="form-phone-icon">
-              <use
-                xlink:href="./images/symbol-defs-form.svg#icon-form-phone-icon"
-              ></use>
-            </svg>
-          </label>
-
-          <label class="form-label" name="user-email">
-            <span class="label-text">Email</span>
-            <input
-              class="form-input"
-              type="email"
-              name="user-email"
-              required
-            />
-
-            <svg class="form-email-icon">
-              <use
-                xlink:href="./images/symbol-defs-form.svg#icon-form-email-icon"
-              ></use>
-            </svg>
-          </label>
-
-          <label class="form-label" name="user-feedback">
-            <span class="label-text"> Comment </span>
-            <textarea
-              class="form-textarea"
-              type="text"
-              name="user-feedback"
-              rows="5"
-              placeholder="Text input"
-            ></textarea>
-          </label>
-
-          <div class="term-field">
-            <input
-              type="checkbox"
-              class="term-input"
-              name="term"
-              value="policy"
-              id="checkbox-id"
-            />
-            <label class="term-label" for="checkbox-id">
-              <div class="box-checkbox">
-                <svg class="form-tick-icon">
-                  <use
-                    xlink:href="./images/symbol-defs-form.svg#icon-form-tick-icon"
-                  ></use>
-                </svg>
-              </div>
-
-              <span class="term-text">
-                I accept the terms and conditions of the
-              </span>
-
-              <span class="privacy-text">Privacy Policy</span>
-            </label>
-          </div>
-
-          <button class="form-button" type="submit">Send</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Modal (pop-up) kodları burada biter. -->
-
     <div class="container">
       <header class="page-header">
         <div class="webstudio">
@@ -169,25 +34,13 @@
           <a href="./index.html" class="studio">STUDIO</a>
         </div>
 
-        <ul class="menu">
-          <li class="itembar"><a href="#" class="link">Studio</a></li>
-          <li class="itembar">
-            <a href="#" class="link">Portfolio</a>
-          </li>
-          <li class="itembar">
-            <a href="#" class="link">Contacts</a>
-          </li>
-        </ul>
-
-        <address class="address">
-          <a class="link" href="mailto:info@devstudio.com">
-            info@devstudio.com
-          </a>
-
-          <a class="link" href="tel:+11(000)1111111">
-            +11(000)111-11-11
-          </a>
-        </address>
+        <div class="mobile-menu-icon">
+          <svg class="icon-hamburger">
+            <use
+              xlink:href="./images/symbol-defs-mobile-menu.svg#icon-hamburger"
+            ></use>
+          </svg>
+        </div>
       </header>
 
       <main>
@@ -203,14 +56,6 @@
         <section class="secondsection section">
           <ul class="subjects">
             <li class="item">
-              <div class="icons">
-                <svg class="icon-antenna">
-                  <use
-                    xlink:href="./images/symbol-defs.svg#icon-antenna"
-                  ></use>
-                </svg>
-              </div>
-
               <h3>Strategy</h3>
               <p>
                 Our goal is to identify the business problem to walk
@@ -219,14 +64,6 @@
             </li>
 
             <li class="item">
-              <div class="icons">
-                <svg class="icon-clock">
-                  <use
-                    xlink:href="./images/symbol-defs.svg#icon-clock"
-                  ></use>
-                </svg>
-              </div>
-
               <h3>Punctuality</h3>
               <p>
                 Bring the key message to the brand's audience for the
@@ -235,14 +72,6 @@
             </li>
 
             <li class="item">
-              <div class="icons">
-                <svg class="icon-diagram">
-                  <use
-                    xlink:href="./images/symbol-defs.svg#icon-diagram"
-                  ></use>
-                </svg>
-              </div>
-
               <h3>Diligence</h3>
               <p>
                 Research and confirm brands with the strongest digital
@@ -251,14 +80,6 @@
             </li>
 
             <li class="item">
-              <div class="icons">
-                <svg class="icon-astronaut">
-                  <use
-                    xlink:href="./images/symbol-defs.svg#icon-astronaut"
-                  ></use>
-                </svg>
-              </div>
-
               <h3>Technologies</h3>
               <p>
                 Design practice focused on digital experiences. We
@@ -268,7 +89,7 @@
           </ul>
         </section>
 
-        <section class="thirdsection section">
+        <section class="thirdsection">
           <h2>Our Team</h2>
 
           <ul class="ourteam">
@@ -595,12 +416,6 @@
                 alt="Banking App"
               />
 
-              <div class="overlay2">
-                14 Stylish and User-Friendly App Design Concepts ·
-                Task Manager App · Calorie Tracker App · Exotic Fruit
-                Ecommerce App · Cloud Storage App
-              </div>
-
               <div class="id2">
                 <p class="work">Banking App</p>
                 <p class="type">App</p>
@@ -614,12 +429,6 @@
                 width=""
                 alt="Cashless Payment"
               />
-
-              <div class="overlay2">
-                14 Stylish and User-Friendly App Design Concepts ·
-                Task Manager App · Calorie Tracker App · Exotic Fruit
-                Ecommerce App · Cloud Storage App
-              </div>
 
               <div class="id2">
                 <p class="work">Cashless Payment</p>
@@ -635,12 +444,6 @@
                 alt="Meditation App"
               />
 
-              <div class="overlay2">
-                14 Stylish and User-Friendly App Design Concepts ·
-                Task Manager App · Calorie Tracker App · Exotic Fruit
-                Ecommerce App · Cloud Storage App
-              </div>
-
               <div class="id2">
                 <p class="work">Meditation App</p>
                 <p class="type">App</p>
@@ -654,12 +457,6 @@
                 width=""
                 alt="Taxi Service"
               />
-
-              <div class="overlay2">
-                14 Stylish and User-Friendly App Design Concepts ·
-                Task Manager App · Calorie Tracker App · Exotic Fruit
-                Ecommerce App · Cloud Storage App
-              </div>
 
               <div class="id2">
                 <p class="work">Taxi Service</p>
@@ -675,12 +472,6 @@
                 alt="Screen Illustrations"
               />
 
-              <div class="overlay2">
-                14 Stylish and User-Friendly App Design Concepts ·
-                Task Manager App · Calorie Tracker App · Exotic Fruit
-                Ecommerce App · Cloud Storage App
-              </div>
-
               <div class="id2">
                 <p class="work">Screen Illustrations</p>
                 <p class="type">Design</p>
@@ -695,12 +486,6 @@
                 alt="Online Courses"
               />
 
-              <div class="overlay2">
-                14 Stylish and User-Friendly App Design Concepts ·
-                Task Manager App · Calorie Tracker App · Exotic Fruit
-                Ecommerce App · Cloud Storage App
-              </div>
-
               <div class="id2">
                 <p class="work">Online Courses</p>
                 <p class="type">Marketing</p>
@@ -709,7 +494,8 @@
           </ul>
         </section>
       </main>
-      <footer class="footer">
+
+      <footer class="footer section">
         <div class="webstudio2">
           <a href="./index.html" class="web2">WEB</a>
           <a href="./index.html" class="studio2">STUDIO</a>
@@ -813,7 +599,10 @@
             </button>
           </div>
         </div>
+        </section>
       </footer>
+    </div>
+
     </div>
   </body>
 </html>

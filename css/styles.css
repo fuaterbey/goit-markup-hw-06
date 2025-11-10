@@ -3,438 +3,36 @@
 *::after {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;    
+    padding: 0;
 }
 
 body {
     font-family: "Roboto", sans serif;
     color: #2E2F42;
-    background-color: #FFFFFF;
+    background-color: #fff;
     font-size: 16px;
     font-style: normal;
 }
 
-/*Mobil menü kodları buradan itibaren başlar.*/
-
-@media screen and (min-width: 320px) {
-    .container {
-        max-width: 320px;
-        padding-left: 16px;
-        padding-right: 16px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .menu-button {
-        display: block;
-    }
-}
-
-
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-}
-
-@media screen and (min-width: 1158px) {
-    .container {
-        max-width: 1158px;
-        padding: 0 15px;
-    }
-}
-
-.mobile-menu-logo {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.mobile-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    position: relative;
-
-}
-
-.icon {
-    color: white;
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-}
-
-.menu-button {
-    display: none;
-    cursor: pointer;
-    position: relative;
-}
-
-.mobile-nav {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: #333;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.mobile-nav ul {
-    list-style: none;
-    text-align: center;
-
-}
-
-.mobile-nav li {
-    margin: 30px 0 ;
-    color: white;
-    font-size: 24px;
-    font-weight: 500;
-
-}
-
-.menu-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-}
-
-/*Modal menü kodları burada biter.*/
-
-/*Modal kodları buradan itibaren başlar.*/
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
-}
-
-.is-open {
-    display: flex;
-}
-
-.modal-content {
-    
-    background-color: white;
-    padding: 24px 24px;
-    border-radius: 4px;
-    width: 408px;
-    height: 584px;
-}
-
-.form-closing {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: rgba(231, 233, 252, 1);
-
-    margin: 0px 0px 24px 336px;
-
-}
-
-.form-close-icon {
-
-    width: 8px;
-    height: 8px;
-
-}
-
-/*
---------------------------------------------------------------------------
-SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİYORSAK;
-
-.form-closing:has(.form-close-icon:hover) {
-
-    background-color: rgba(64, 75, 191, 1);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
---------------------------------------------------------------------------
-*/
-
-.form-closing:hover {
-    background-color: rgba(64, 75, 191, 1);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-.form-closing:hover .form-close-icon {
-    fill: white;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.baslik-modal{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: rgba(46, 47, 66, 1);
-    margin-bottom: 16px;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-        
-    width: 360px;
-    height: 336px;
-    padding: 0px;
-    
-}
-
-.form-input {
-    display: flex;
-    flex-direction: column;
-    padding: 8px 8px 8px 38px;
-    color: #212121;
-    width: 360px;
-    height: 40px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 16px;
-    outline: none;
-
-}
-
-
-.form-label {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0px;
-    gap: 4px;
-
-    transition: color 150ms ease-in-out;
-
-    position: relative; 
-}
-
-.label-text {
-    font-size: 12px;
-    line-height: 1.166;
-    letter-spacing: 0.04em;
-    color: rgba(142, 143, 153, 1);
-}
-
-.form-input:hover,
-.form-input:focus {
-    border-color: rgba(77, 90, 229, 1);
-}
-
-.form-input::placeholder {
-    color: #9e9e9e;
-}
-
-.form-name-icon {
-
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    top: 32px;
-    left: 19px;
-}
-
-.form-phone-icon {
-
-        position: absolute;
-        width: 13px;
-        height: 13px;
-        top: 32px;
-        left: 19px;
-    }
-
-.form-email-icon {
-
-        position: absolute;
-        width: 15px;
-        height: 12px;
-        top: 32px;
-        left: 19px;
-    }
-
-.form-input:focus + .form-name-icon,
-.form-input:focus + .form-email-icon,
-.form-input:focus + .form-phone-icon {
-
-    fill: rgba(77, 90, 229, 1);
-    border-color: rgba(77, 90, 229, 1);
-
-}
-
-
-.form-textarea {
-
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    color: #212121;
-    width: 360px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 16px;
-    outline: none;
-
-}
-
-.form-textarea:hover,
-.form-textarea:focus {
-    
-    border-color: rgba(77, 90, 229, 1);
-}
-
-.form-textarea::placeholder {
-    color: #9e9e9e;
-}
-
-.term-field {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 8px;
-    margin-bottom: 16px;
-}
-
-.term-input {
-    display:none
-}
-
-.term-label {
-
-    display: flex;
-    flex-direction: row;
-    
-    align-items: center;
-    color: rgba(142, 143, 153, 1);
-    font-size: 12px;
-    line-height: 1.166;
-    letter-spacing: 0.04em;
-}
-
-.box-checkbox {
-    position: relative;
-    box-sizing: content-box;
-    width: 16px;
-    height: 16px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-}
-
-.form-tick-icon {
-
-    opacity: 0;
-
-    position: absolute;
-    width: 10px;
-    height: 8px;
-    top: 4px;
-    left: 3px;
-    
-    color: rgba(244, 244, 253, 1);
-    
-    
-}
-
-.term-input:checked+.term-label .box-checkbox {
-    
-    background-color: rgba(64, 75, 191, 1);
-
-}
-
-.term-input:checked+.term-label .form-tick-icon {
-
-    opacity: 1;
-}
-
-.term-text {
-    padding-left: 8px;
-}
-
-.privacy-text {
-    color:rgba(77, 90, 229, 1);
-    text-decoration: underline;
-    padding-left: 4px;
-        
-}
-
-.form-button {
-    display: inline-flex;
-    align-self: flex-start;
-    width: 169px;
-    height: 56px;
-    color: rgba(255, 255, 255, 1);
-    padding: 12px 32px;
-    
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-
-    cursor: pointer;
-    justify-content: center;
-
-    border: none;
-    border-radius: 4px;
-    background-color: rgba(77, 90, 229, 1);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-}
-
-.form-button:hover,
-.form-button:focus {
-    background-color: #404BBF;
-
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-/*Modal kodları burada biter.*/
-
 .container {
-    max-width: 320px;
+    width: 320px;
     margin: 0 auto;
-    padding: 0 16px;
 }
 
 .page-header {
-      
     display: flex;
-    padding: 24px 156px;
+    gap: 149px;
+
+    padding: 16px 16px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     background-color: #FFFFFF;
     border-bottom: 1px solid #E7E9FC;
 }
 
-
 .webstudio {
     display: flex;
-    gap: 0px;
-    padding: 0px 76px 0px 0px;   
+
 }
 
 .web {
@@ -442,210 +40,147 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
     font-family: "Raleway";
     font-weight: 700;
     font-size: 18px;
+    line-height: 1.167;
     text-decoration: none;
     letter-spacing: 0.03em;
- }
+}
 
- .studio {
+.studio {
     color: #2E2F42;
     font-family: "Raleway";
     font-weight: 700;
     font-size: 18px;
+    line-height: 1.167;
     text-decoration: none;
     letter-spacing: 0.03em;
- }
-  
-.menu {
+}
+
+.mobile-menu-icon {
     display: flex;
-    gap: 40px;
-    list-style: none;
-    padding-right: 332px;
-    line-height: 1.5;
-}
+    width: 24px;
+    height: 24px;
 
-.menu .link {
-    display: block;
-    color: #2E2F42;
-    text-decoration: none;
-}
-
-.menu .link:hover,
-.menu .link:focus {
-    color: #404BBF;
-    line-height: 1.5;
-    text-decoration: none;
-
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu .link::after {
-    
-    display:block;
-    
-    background-color: #fff;
-    width: auto;
-    height: 4px;
-    border-radius: 2px;
-    content: "";
-    
+    align-items: center;
+    justify-content: center;
 
 }
 
-.menu .link:hover::after {
+.icon-hamburger {
 
-    background-color: #404BBF;
+    width: 16.8px;
+    height: 14.4px;
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.address {
-    display: flex;
-    gap: 40px;
-            
-}
-
-.address .link {
-    color: #434455;
-    text-decoration: none;
-    font-style: normal;
-}
-
-.address .link:hover,
-.address .link:focus {
-    color: #404BBF;
-
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .firstsection {
-    
+
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7)),url(../images/hero-background.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7)), url(../images/hero-background.jpg);
     background-position: center;
     background-color: #2E2F42;
     background-size: cover;
-            
+
 }
 
 h1 {
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.0714;
+    font-size: 36px;
+    line-height: 1.111;
     color: #FFFFFF;
     font-style: normal;
     text-align: center;
     letter-spacing: 0.02em;
 
-    padding: 188px 472px 0px;
-    margin-bottom: 48px;
+    padding: 72px 52px;
+
 }
 
 button {
-    
-    margin: 0 auto 188px;
-   
+
+    margin: 0 auto 72px;
+
 }
 
 .buttontext {
-    
+
     cursor: pointer;
     color: #FFFFFF;
-    background-color: #4D5AE5;
-    
+    background-color: rgba(77, 90, 229, 1);
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    
+
     text-align: center;
     letter-spacing: 0.04em;
-    
-    box-shadow: 0px 4px 4px 0px #00000026;
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
     border-radius: 4px;
 
     padding: 16px 32px;
- 
-}
 
-.buttontext:hover {
-    background-color: #404BBF;
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .section {
-    padding: 120px 156px;
+    padding: 96px 16px;
 }
 
 .secondsection .subjects {
     display: flex;
-    gap: 24px;
+    flex-direction: column;
+    gap: 72px;
     list-style: none;
 }
 
-.icons {
-    display: flex;        /*justify-items ise display: grid özelliğinide kullanılır. bu özellik kullanılıp da ortalanabilirdi fakat tercih meselesi. display: grid verip justify-items: center, align-items: center deseydiniz de ortalanırdı.*/
-
-    width: 264px;
-    height: 112px;
-    border: 1px solid #8E8F99;
-    border-radius: 4px;
-    background-color: #F4F4FD;
-    justify-content: center;
-    margin-bottom: 8px;
-    
-
- }
-
-  .icon-antenna,
-  .icon-clock,
-  .icon-diagram,
-  .icon-astronaut {
-
-    width: 64px;
-
-  }
-
 .item h3 {
-    font-size: 20px;
-    line-height: 1.2;
-    color: #2E2F42;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.111;
+    color: rgba(46, 47, 66, 1);
     letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
 .item p {
     font-size: 16px;
     line-height: 1.5;
-    color: #515543;
-    letter-spacing:0.02em;
+    color: rgba(67, 68, 85, 1);
+    letter-spacing: 0.02em;
 }
-
 
 .thirdsection {
 
-    background-color: #F4F4FD;
-    
+    background-color: rgba(244, 244, 253, 1);
+    padding: 96px 0px 0px;
+
 }
 
-h2 {    
+h2 {
+
     font-size: 36px;
     line-height: 1.111;
-    color: #2E2F42;
+    color: rgba(46, 47, 66, 1);
     font-weight: 700;
     text-align: center;
     letter-spacing: 0.02em;
 
-    margin-bottom: 72px;
+    padding: 0px 0px 72px;
+
 }
 
 .ourteam {
     display: flex;
+    flex-direction: column;
     list-style: none;
-    gap: 24px;
+    gap: 72px;
+
+    padding: 0px 28px 96px;
+
 }
 
 .ourteam .card {
@@ -655,30 +190,32 @@ h2 {
 
 }
 
+.card-image {
+    display: block;
+}
+
 .ourteam .id {
     display: flex;
-    
     flex-direction: column;
     gap: 8px;
     padding: 32px 16px;
     text-align: center;
 
 }
-.card-image {
-    display: block;
-}
+
 
 .ourteam .name {
     font-size: 20px;
     line-height: 1.2;
-    color: #2E2F42;  
-    font-weight: 700;
+    color: rgba(46, 47, 66, 1);
+    font-weight: 500;
 }
 
 .ourteam .position {
     font-size: 16px;
     line-height: 1.5;
-    color: #435544;
+    color: rgba(67, 68, 85, 1);
+    font-weight: 400;
 }
 
 
@@ -688,7 +225,7 @@ h2 {
     gap: 24px;
     align-self: flex-start;
     list-style: none;
-    
+
 }
 
 .icons_ourteam {
@@ -696,95 +233,64 @@ h2 {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    background-color: #4D5AE5;
+    background-color: rgba(77, 90, 229, 1);
     width: 40px;
     height: 40px;
 }
 
-.icons_ourteam:hover {
 
-    background-color: #404BBF;
+.icon-instagram_1,
+.icon-twitter_1,
+.icon-facebook_1,
+.icon-linkedin_1 {
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    width: 24px;
+    height: 24px;
+
 }
 
-  .icon-instagram_1,
-  .icon-twitter_1,
-  .icon-facebook_1,
-  .icon-linkedin_1 {
+.fourthsection {
 
-      width: 24px;
-      height: 24px;
+    background-color: #fff;
 
-
-  }
+}
 
 .portfolio {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    gap: 24px;      
+    gap: 48px;
+
 }
 
 .card2 {
     position: relative;
     padding: 0px;
-    background-color: #fff;   
+    background-color: #fff;
     overflow: hidden;
-}
-
-.card2:hover {
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+    box-shadow: 0px 1px 6px 0px rgba(7, 7, 7, 0.08);
 }
 
 .card2-image {
-    width: 360px;
+    width: 288px;
+    height: 280px;
     display: block;
 
-}
 
-.overlay2 {
-    top: 0;
-    left: 0;
-    z-index: 1;
-    
-    position: absolute;
-    width: 360px;
-    height: 300px;
-
-    padding: 40px 32px 164px;
-    background-color: #4D5AE5;
-    color: #fdfdf4;
-    letter-spacing: 0.02em;
-    
-    transform: translateY(100%);
-    transition: transform 250ms ease-in-out;
-}
-
-.card2:hover .overlay2 {
-    transform: translateY(0);
 }
 
 .portfolio .id2 {
     position: relative;
-    z-index: 2;
     background-color: white;
 
     display: flex;
     flex-direction: column;
     gap: 8px;
     padding: 32px 16px;
-    
+
     border-width: 0px 1px 1px 1px;
     border-style: solid;
     border-color: #E7E9FC;
-
-
 }
 
 .portfolio .work {
@@ -800,15 +306,15 @@ h2 {
     color: #435544;
 }
 
+
 footer {
     display: flex;
-    flex-direction: row;
-    background-color: #2E2F42;
-    padding: 100px 120px 100px 156px;
-    gap: 16px;
+    flex-direction: column;
+    background-color: rgba(46, 47, 66, 1);
+    padding: 0px 0px 0px 0px;
+    gap: 72px;
 
-    height: 312px;
-   }
+}
 
 .webstudio2 {
     font-family: "Raleway";
@@ -816,18 +322,17 @@ footer {
     font-size: 18px;
     line-height: 1.166;
     letter-spacing: 0.03em;
+    text-align: center;
 
-    width: 264px;
-    height: 112px;
 }
 
 .web2 {
-    color: #4D5AE5;
+    color: rgba(77, 90, 229, 1);
     text-decoration: none;
 }
 
 .studio2 {
-    color: #F4F4FD;
+    color: rgba(244, 244, 253, 1);
     text-decoration: none;
 }
 
@@ -836,15 +341,15 @@ footer {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    color: #F4F4FD;
+    color: rgba(244, 244, 253, 1);
     letter-spacing: 0.02em;
+    text-align: left;
+    margin-top: 16px;
 }
 
 .social {
-    margin-left: 120px;
-    margin-right: 80px;
-    width: 208px;
-    height: 80px;
+    margin: 0px;
+    justify-items: center;
 }
 
 .social-media-text {
@@ -852,63 +357,53 @@ footer {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 1);
     letter-spacing: 0.02em;
-    margin-bottom: 16px;  
+    margin-bottom: 16px;
 }
 
 .social-icons {
     display: flex;
     flex-direction: row;
-    gap: 16px;    
+    gap: 16px;
     list-style: none;
-    
+
 }
 
 .icons_footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: rgba(77, 90, 229, 1);
-    
+
 }
 
-  .icon-instagram_2,
-  .icon-twitter_2,
-  .icon-facebook_2,
-  .icon-linkedin_2 {
-    
-    width: 24px ;
-    height: 24px ;
-      
-    
+.icon-instagram_2,
+.icon-twitter_2,
+.icon-facebook_2,
+.icon-linkedin_2 {
+
+    width: 24px;
+    height: 24px;
+
+
 }
-
-.icons_footer:hover {
-
-    background-color: rgba(49, 208, 170, 1);
-
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 
 .subscribe {
     display: flex;
     flex-direction: column;
-    width: 453px;
-    height: 80px;
+    text-align: center;
+
 }
 
 .subscribe-label {
 
     display: flex;
     flex-direction: row;
-    margin-right: 24px;
 
     gap: 4px;
 }
@@ -918,14 +413,16 @@ footer {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 1);
     letter-spacing: 0.02em;
     margin-bottom: 16px;
 }
 
 .email-button-area {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
 }
 
 .form2-input {
@@ -933,11 +430,12 @@ footer {
     flex-direction: column;
     padding: 8px;
     background-color: rgba(46, 47, 66, 1);
-    width: 264px;
+    width: 288px;
     height: 40px;
 
     border-color: white;
     border-radius: 4px;
+    opacity: 0.3;
     font-family: inherit;
     font-size: 16px;
     outline: none;
@@ -948,6 +446,12 @@ footer {
 
 .form2-input::placeholder {
     color: rgba(255, 255, 255, 1);
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 0.04em;
 }
 
 .form2-button {
@@ -956,17 +460,24 @@ footer {
     padding: 8px 24px;
     background-color: rgba(77, 90, 229, 1);
     color: rgba(255, 255, 255, 1);
-    width: 165px;
-    height: 40px;
-    gap:16px;
-        
+    gap: 16px;
+    margin-bottom: 0px;
+
+    border: 1px solid rgba(46, 47, 66, 1);
     border-radius: 4px;
-    
+
     font-family: inherit;
-    font-weight: 500;
+
+    outline: none;
+}
+
+.text2 {
     font-size: 16px;
     line-height: 1.5;
-    outline: none;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 1);
+
 }
 
 .icon-subscribe-button {
@@ -974,4 +485,3 @@ footer {
     height: 20px;
 
 }
-
