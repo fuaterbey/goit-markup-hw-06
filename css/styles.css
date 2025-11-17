@@ -345,12 +345,16 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
 
     margin: 24px 24px 0px 262px;
 
+    cursor: pointer;
+
 }
 
 .close-mobile-menu {
 
     width: 8px;
     height: 8px;
+
+    
 
     }
 
