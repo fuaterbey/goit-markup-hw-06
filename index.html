@@ -28,36 +28,6 @@
   </head>
 
   <body>
-    <!-- Mobile menü kodları buradan başlar. -->
-    <div class="mobile-menu">
-      <input type="checkbox" id="mobile-menu-toggle" hidden />
-      <p class="mobile-menu-logo">Logo</p>
-      <label for="mobile-menu-toggle" class="menu-button">
-        <svg class="icon hamburger">
-          <use
-            xlink:href="./images/symbol-defs-mobile-menu.svg#icon-hamburger"
-          ></use>
-        </svg>
-      </label>
-
-      <nav class="mobile-nav">
-        <label for="mobile-menu-toggle" class="menu-close">
-          <svg class="icon close-mobile-menu">
-            <use
-              xlink:href="./images/symbol-defs-mobile-menu.svg#icon-close-mobile-menu"
-            ></use>
-          </svg>
-        </label>
-        <ul>
-          <li>Studio</li>
-          <li>Portfolio</li>
-          <li>Contacts</li>
-        </ul>
-      </nav>
-    </div>
-
-    <!-- Mobile menü kodları burada biter. -->
-
     <!-- Modal (pop-up) kodları buradan itibaren başlar. -->
 
     <div class="modal">
@@ -159,6 +129,109 @@
         </form>
       </div>
     </div>
+
+    <!-- Modal (pop-up) kodları burada biter. -->
+
+    <!-- Mobile menü kodları buradan başlar. -->
+
+    <div class="mobile-menu">
+      <input type="checkbox" id="mobile-menu-toggle" hidden />
+      <label class="menu-close" for="mobile-menu-toggle">
+        <svg class="icon close-mobile-menu">
+          <use
+            xlink:href="./images/symbol-defs-mobile-menu.svg#icon-close-mobile-menu"
+          ></use>
+        </svg>
+      </label>
+
+      <nav class="mobile-nav">
+        <ul class="mobile-menu-list">
+          <li class="mobile-menu-title">Studio</li>
+          <li class="mobile-menu-title">Portfolio</li>
+          <li class="mobile-menu-title">Contacts</li>
+        </ul>
+      </nav>
+
+      <address class="mobile-menu-address">
+        <a class="mobile-menu-link" href="tel:+11(000)1111111">
+          +11(000)111-11-11
+        </a>
+
+        <a class="mobile-menu-link" href="mailto:info@devstudio.com">
+          info@devstudio.com
+        </a>
+      </address>
+
+      <ul class="social-icons-mobile-menu">
+                  <li>
+                    <a
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      class="links"
+                    >
+                      <div class="icons_ourteam">
+                        <svg class="icon-instagram_1">
+                          <use
+                            xlink:href="./images/symbol-defs1.svg#icon-instagram_1"
+                          ></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.twitter.com/"
+                      target="_blank"
+                      class="links"
+                    >
+                      <div class="icons_ourteam">
+                        <svg class="icon-twitter_1">
+                          <use
+                            xlink:href="./images/symbol-defs1.svg#icon-twitter_1"
+                          ></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      class="links"
+                    >
+                      <div class="icons_ourteam">
+                        <svg class="icon-facebook_1">
+                          <use
+                            xlink:href="./images/symbol-defs1.svg#icon-facebook_1"
+                          ></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      class="links"
+                    >
+                      <div class="icons_ourteam">
+                        <svg class="icon-linkedin_1">
+                          <use
+                            xlink:href="./images/symbol-defs1.svg#icon-linkedin_1"
+                          ></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+    </div>
+
+    <!-- Mobile menü kodları burada biter. -->
 
     <div class="container">
       <header class="page-header">
