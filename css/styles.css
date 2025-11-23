@@ -1625,6 +1625,7 @@ footer {
     font-family: "Raleway";
     font-weight: 700;
     font-size: 18px;
+    line-height: 1.167;
     text-decoration: none;
     letter-spacing: 0.03em;
  }
@@ -1676,6 +1677,7 @@ footer {
 
 .address {
     display: flex;
+    flex-direction: row;
     gap: 40px;
             
 }

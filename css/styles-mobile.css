@@ -55,6 +55,75 @@ body {
     letter-spacing: 0.03em;
 }
 
+.menu {
+    display: none;
+    gap: 40px;
+    list-style: none;
+    padding-right: 332px;
+    line-height: 1.5;
+}
+
+.menu .link {
+    display: none;
+    color: #2E2F42;
+    text-decoration: none;
+}
+
+.menu .link:hover,
+.menu .link:focus {
+    display: none;
+    color: #404BBF;
+    line-height: 1.5;
+    text-decoration: none;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu .link::after {
+
+    display: none;
+
+    background-color: #fff;
+    width: auto;
+    height: 4px;
+    border-radius: 2px;
+    content: "";
+
+
+}
+
+.menu .link:hover::after {
+
+    display: none;
+    background-color: #404BBF;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address {
+    display: none;
+    gap: 40px;
+
+}
+
+.address .link {
+    display: none;
+    color: #434455;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.address .link:hover,
+.address .link:focus {
+    display: none;
+    color: #404BBF;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .mobile-menu-icon {
     display: flex;
     width: 24px;
