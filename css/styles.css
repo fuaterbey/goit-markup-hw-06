@@ -1966,6 +1966,7 @@ footer {
 .page-header {
       
     display: flex;
+    gap: 0px;
     padding: 24px 156px;
     align-items: center;
     background-color: #FFFFFF;
