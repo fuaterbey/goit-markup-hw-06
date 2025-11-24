@@ -259,8 +259,7 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
     top: 4px;
     left: 3px;
     
-    color: rgba(244, 244, 253, 1);
-    
+    color: rgba(244, 244, 253, 1);    
     
 }
 
@@ -338,7 +337,6 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
 
 }
 
-
 .mobile-menu-toggle {
 
     background-color: white;
@@ -368,9 +366,7 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
 
     width: 8px;
     height: 8px;
-
     
-
     }
 
 .menu-close:hover {
@@ -580,6 +576,39 @@ button {
     flex-direction: column;
     gap: 72px;
     list-style: none;
+}
+
+.item {
+    
+    position: relative;
+    list-style: none;
+
+}
+
+.icons {
+
+    display: none;
+    /*justify-items ise display: grid özelliğinide kullanılır. bu özellik kullanılıp da ortalanabilirdi fakat tercih meselesi. display: grid verip justify-items: center, align-items: center deseydiniz de ortalanırdı.*/
+
+    width: 264px;
+    height: 112px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    background-color: #F4F4FD;
+    justify-content: center;
+    margin-bottom: 8px;
+
+
+}
+
+.icon-antenna,
+.icon-clock,
+.icon-diagram,
+.icon-astronaut {
+
+    display: none;
+    width: 64px;
+
 }
 
 .item h3 {
@@ -793,7 +822,14 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: rgba(46, 47, 66, 1);
-    padding: 0px 0px 0px 0px;
+    padding: 96px 16px;
+    gap: 72px;
+
+}
+
+.footer-1 {
+    display: flex;
+    flex-direction: column;
     gap: 72px;
 
 }
@@ -982,6 +1018,143 @@ footer {
 
 @media screen and (min-width: 768px) {
 
+/* Mobile menü kodları buradan başlar. */
+
+    .mobile-menu {
+        display: none;
+        background-color: #FFF;
+        z-index: 2;
+        width: auto;
+        height: auto;
+        visibility: hidden;
+    }
+
+    .mobile-menu-toggle:checked .mobile-menu {
+        display: none;
+        visibility: visible;
+
+    }
+
+
+    .mobile-menu-toggle {
+        display: none;
+        background-color: white;
+        padding: 24px 24px;
+        border-radius: 4px;
+        width: 408px;
+        height: 584px;
+    }
+
+    .menu-close {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: rgba(231, 233, 252, 1);
+
+        margin: 24px 24px 0px 262px;
+
+        cursor: pointer;
+
+    }
+
+    .close-mobile-menu {
+        display: none;
+        width: 8px;
+        height: 8px;
+
+    }
+
+    .menu-close:hover {
+        display: none;
+        background-color: rgba(64, 75, 191, 1);
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+    .menu-close:hover .close-mobile-menu {
+        display: none;
+        fill: white;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-nav {
+        display: none;
+        width: 151px;
+        height: 200px;
+
+        margin: 24px 153px 168px 16px;
+
+        cursor: pointer;
+
+    }
+
+    .mobile-menu-list {
+        display: none;
+        flex-direction: column;
+        gap: 40px;
+
+        list-style: none;
+
+        font-family: "Roboto";
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.1111;
+
+    }
+
+    .mobile-menu-title:hover {
+        display: none;
+        color: rgba(64, 75, 191, 1);
+    }
+
+    .mobile-menu-address {
+
+        display: none;
+        flex-direction: column;
+        gap: 24px;
+
+        justify-items: center;
+        text-align: center;
+
+        width: 193px;
+        height: 72px;
+
+        margin: 0px 111px 48px 16px;
+    }
+
+    .mobile-menu-link {
+        display: none;
+        font-family: "Roboto";
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        font-style: normal;
+
+    }
+
+    .social-icons-mobile-menu {
+
+        display: none;
+        flex-direction: row;
+        gap: 40px;
+
+        list-style: none;
+
+        width: 280px;
+        height: 40px;
+
+        margin: 0px 24px 40px 16px;
+    }
+
+    /* Mobile menü kodları burada biter. */
+
 .container {
     max-width: 768px;
     margin: 0 auto;
@@ -990,9 +1163,8 @@ footer {
 .page-header {
 
     display: flex;
-    padding: 0px 16px 0px;
-    align-items: center;
-    justify-content: space-around;
+    gap: 120px;
+    padding: 16px 16px;
     background-color: #FFFFFF;
     border-bottom: 1px solid rgba(231, 233, 252, 1);
 }
@@ -1001,7 +1173,7 @@ footer {
 .webstudio {
     display: flex;
     gap: 0px;
-    padding: 0px 120px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 .web {
@@ -1022,11 +1194,29 @@ footer {
     letter-spacing: 0.03em;
 }
 
+.mobile-menu-icon {
+    display: none;
+    width: 24px;
+    height: 24px;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.icon-hamburger {
+    
+    display: none;
+    width: 16.8px;
+    height: 14.4px;
+
+}
+
 .menu {
     display: flex;
     gap: 40px;
     list-style: none;
-    padding-right: 122px;
+    padding: 0px 0px 0px 0px;
 }
 
 .menu .link {
@@ -1076,7 +1266,7 @@ footer {
     flex-direction: column;
     gap: 12px;
 
-    padding: 16px 16px 16px 0px;
+    padding: 0px 0px 0px 0px;
 
 }
 
@@ -1163,14 +1353,45 @@ button {
 
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     gap: 24px;
+    text-align: left;
 
 }
 
 .item {
+    display: flex;
+    flex-direction: row;
     position: relative;
     flex-basis: calc((100% - 24px) / 2);
     list-style: none;
+    
+
+}
+
+.icons {
+
+    display: none;
+    /*justify-items ise display: grid özelliğinide kullanılır. bu özellik kullanılıp da ortalanabilirdi fakat tercih meselesi. display: grid verip justify-items: center, align-items: center deseydiniz de ortalanırdı.*/
+
+    width: 264px;
+    height: 112px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    background-color: #F4F4FD;
+    justify-content: center;
+    margin-bottom: 8px;
+
+
+}
+
+.icon-antenna,
+.icon-clock,
+.icon-diagram,
+.icon-astronaut {
+
+    display: none;
+    width: 64px;
 
 }
 
@@ -1183,6 +1404,7 @@ button {
 
     margin-bottom: 8px;
     margin-right: 92px;
+    text-align: left;
 }
 
 .item p {
@@ -1194,9 +1416,11 @@ button {
 }
 
 .thirdsection {
-
+    
     background-color: rgba(244, 244, 253, 1);
     padding: 96px 108px 96px;
+    flex-direction: row;
+    
 
 }
 
@@ -1215,6 +1439,7 @@ h2 {
 
 .ourteam {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
     gap: 24px;
@@ -1227,6 +1452,7 @@ h2 {
     background-color: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
+    width: 264px;
 
 }
 
@@ -1388,11 +1614,11 @@ footer {
 
 }
 
-.web-and-social {
-
+.footer-1 {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    
+
 }
 
 .webstudio2 {
@@ -1401,19 +1627,20 @@ footer {
     font-size: 18px;
     line-height: 1.166;
     letter-spacing: 0.03em;
+    text-align: left;
 
 }
 
 .web2 {
     color: #4D5AE5;
-    text-decoration: none;
+    text-decoration: none;    
 
 }
 
 .studio2 {
     color: #F4F4FD;
     text-decoration: none;
-
+    
 }
 
 .aim {
@@ -1427,12 +1654,16 @@ footer {
 }
 
 .social {
+    display: flex;
+    flex-direction: column;
     margin-right: 164px;
     width: 208px;
     height: 80px;
+    text-align: left;
 }
 
 .social-media-text {
+    display: flex;
     font-family: "Roboto";
     font-weight: 500;
     font-size: 16px;
@@ -1440,6 +1671,8 @@ footer {
     color: #FFFFFF;
     letter-spacing: 0.02em;
     margin-bottom: 16px;
+    
+   
 }
 
 .social-icons {
@@ -1587,10 +1820,146 @@ footer {
    
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1440px) {
+
+/* Mobile menü kodları buradan başlar. */
+
+    .mobile-menu {
+        display: none;
+        background-color: #FFF;
+        z-index: 2;
+        width: auto;
+        height: auto;
+        visibility: hidden;
+    }
+
+    .mobile-menu-toggle:checked .mobile-menu {
+        display: none;
+        visibility: visible;
+
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+        background-color: white;
+        padding: 24px 24px;
+        border-radius: 4px;
+        width: 408px;
+        height: 584px;
+    }
+
+    .menu-close {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: rgba(231, 233, 252, 1);
+
+        margin: 24px 24px 0px 262px;
+
+        cursor: pointer;
+
+    }
+
+    .close-mobile-menu {
+        display: none;
+        width: 8px;
+        height: 8px;
+
+    }
+
+    .menu-close:hover {
+        display: none;
+        background-color: rgba(64, 75, 191, 1);
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+
+    .menu-close:hover .close-mobile-menu {
+        display: none;
+        fill: white;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-nav {
+        display: none;
+        width: 151px;
+        height: 200px;
+
+        margin: 24px 153px 168px 16px;
+
+        cursor: pointer;
+
+    }
+
+    .mobile-menu-list {
+        display: none;
+        flex-direction: column;
+        gap: 40px;
+
+        list-style: none;
+
+        font-family: "Roboto";
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.1111;
+
+    }
+
+    .mobile-menu-title:hover {
+        display: none;
+        color: rgba(64, 75, 191, 1);
+    }
+
+    .mobile-menu-address {
+
+        display: none;
+        flex-direction: column;
+        gap: 24px;
+
+        justify-items: center;
+        text-align: center;
+
+        width: 193px;
+        height: 72px;
+
+        margin: 0px 111px 48px 16px;
+    }
+
+    .mobile-menu-link {
+        display: none;
+        font-family: "Roboto";
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        font-style: normal;
+
+    }
+
+    .social-icons-mobile-menu {
+
+        display: none;
+        flex-direction: row;
+        gap: 40px;
+
+        list-style: none;
+
+        width: 280px;
+        height: 40px;
+
+        margin: 0px 24px 40px 16px;
+    }
+
+    /* Mobile menü kodları burada biter. */
 
 .container {
-    max-width: 1158px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -1599,7 +1968,6 @@ footer {
     display: flex;
     padding: 24px 156px;
     align-items: center;
-    justify-content: space-around;
     background-color: #FFFFFF;
     border-bottom: 1px solid #E7E9FC;
 }
@@ -1628,6 +1996,24 @@ footer {
     line-height: 1.167;
     text-decoration: none;
     letter-spacing: 0.03em;
+ }
+
+ .mobile-menu-icon {
+     display: none;
+     width: 24px;
+     height: 24px;
+
+     align-items: center;
+     justify-content: center;
+
+ }
+
+ .icon-hamburger {
+
+     display: none;
+     width: 16.8px;
+     height: 14.4px;
+
  }
   
 .menu {
@@ -1759,13 +2145,23 @@ button {
 
 .secondsection .subjects {
     display: flex;
+    flex-direction: row;
     gap: 24px;
     list-style: none;
 }
 
+.item {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-basis:0%;
+
+}
+
 .icons {
     display: flex;        /*justify-items ise display: grid özelliğinide kullanılır. bu özellik kullanılıp da ortalanabilirdi fakat tercih meselesi. display: grid verip justify-items: center, align-items: center deseydiniz de ortalanırdı.*/
-
+    flex-direction: row;
     width: 264px;
     height: 112px;
     border: 1px solid #8E8F99;
@@ -1774,14 +2170,14 @@ button {
     justify-content: center;
     margin-bottom: 8px;
     
-
- }
+}
 
   .icon-antenna,
   .icon-clock,
   .icon-diagram,
   .icon-astronaut {
 
+    display: flex;
     width: 64px;
 
   }
@@ -1791,6 +2187,7 @@ button {
     line-height: 1.2;
     color: #2E2F42;
     letter-spacing: 0.02em;
+    text-align:left;
 }
 
 .item p {
