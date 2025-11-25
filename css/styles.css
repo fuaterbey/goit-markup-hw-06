@@ -1968,16 +1968,18 @@ footer {
     display: flex;
     gap: 0px;
     padding: 24px 156px;
-    align-items: center;
+    justify-content:left ;
     background-color: #FFFFFF;
     border-bottom: 1px solid #E7E9FC;
+    
 }
 
 
 .webstudio {
     display: flex;
     gap: 0px;
-    padding: 0px 0px 0px 0px;   
+    padding: 0px 76px 0px 0px;
+
 }
 
 .web {
@@ -1985,6 +1987,7 @@ footer {
     font-family: "Raleway";
     font-weight: 700;
     font-size: 18px;
+    line-height: 1.167;
     text-decoration: none;
     letter-spacing: 0.03em;
  }
@@ -2023,6 +2026,7 @@ footer {
     list-style: none;
     padding-right: 332px;
     line-height: 1.5;
+
 }
 
 .menu .link {
@@ -2070,9 +2074,14 @@ footer {
 }
 
 .address .link {
+    font-family: "Roboto";
     color: #434455;
     text-decoration: none;
     font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 .address .link:hover,
