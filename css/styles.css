@@ -510,6 +510,82 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
 
 }
 
+.menu {
+    display: none;
+    gap: 40px;
+    list-style: none;
+    padding-right: 332px;
+    line-height: 1.5;
+
+}
+
+.menu .link {
+    display: none;
+    position: relative;
+    color: #2E2F42;
+    text-decoration: none;
+}
+
+.menu .link:hover,
+.menu .link:focus {
+    display: none;
+    color: #404BBF;
+    line-height: 1.5;
+    text-decoration: none;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu .link::after {
+    display: none;
+    position: absolute;
+    display: block;
+    position: relative;
+    background-color: #fff;
+    width: auto;
+    height: 4px;
+    border-radius: 2px;
+    content: "";
+
+}
+
+.menu .link:hover::after {
+    display: none;
+    background-color: #404BBF;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address {
+    display: none;
+    flex-direction: row;
+    gap: 40px;
+
+}
+
+.address .link {
+    display: none;
+    font-family: "Roboto";
+    color: #434455;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.address .link:hover,
+.address .link:focus {
+    display: none;
+    color: #404BBF;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .firstsection {
 
     display: flex;
@@ -537,6 +613,7 @@ h1 {
 button {
 
     margin: 0 auto 72px;
+    border: none;
 
 }
 
@@ -1221,6 +1298,7 @@ footer {
 
 .menu .link {
     display: block;
+    position: relative;
     font-family: "Roboto";
     color: rgba(46, 47, 66, 1);
     text-decoration: none;
@@ -1244,7 +1322,7 @@ footer {
 .menu .link::after {
 
     display: block;
-
+    position: absolute;
     background-color: #fff;
     width: auto;
     height: 4px;
@@ -1271,6 +1349,7 @@ footer {
 }
 
 .address .link {
+    display: flex;
     color: #434455;
     text-decoration: none;
     font-style: normal;
@@ -1282,6 +1361,7 @@ footer {
 
 .address .link:hover,
 .address .link:focus {
+    display: flex;
     color: #404BBF;
 
     transition-duration: 250ms;
@@ -1820,7 +1900,7 @@ footer {
    
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
 
 /* Mobile menü kodları buradan başlar. */
 
@@ -2031,6 +2111,7 @@ footer {
 
 .menu .link {
     display: block;
+    position: relative;
     color: #2E2F42;
     text-decoration: none;
 }
@@ -2046,15 +2127,14 @@ footer {
 }
 
 .menu .link::after {
-    
+    position: absolute;
     display:block;
-    
+    position:relative;
     background-color: #fff;
     width: auto;
     height: 4px;
     border-radius: 2px;
     content: "";
-    
 
 }
 
@@ -2074,6 +2154,7 @@ footer {
 }
 
 .address .link {
+    display: flex;
     font-family: "Roboto";
     color: #434455;
     text-decoration: none;
@@ -2086,6 +2167,7 @@ footer {
 
 .address .link:hover,
 .address .link:focus {
+    display: flex;
     color: #404BBF;
 
     transition-duration: 250ms;
