@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Third Homework - Flexbox</title>
+    <title>Sixth Homework - Responsivity</title>
 
     <link
       rel="stylesheet"
@@ -133,9 +133,10 @@
     <!-- Modal (pop-up) kodları burada biter. -->
 
     <!-- Mobile menü kodları buradan başlar. -->
-
+    <input type="checkbox" class="mobile-menu-toggle" id="mobile-menu-toggle" hidden />
+    
     <div class="mobile-menu">
-      <input type="checkbox" id="mobile-menu-toggle" hidden />
+      
       <label class="menu-close" for="mobile-menu-toggle">
         <svg class="icon close-mobile-menu">
           <use
@@ -236,21 +237,21 @@
     <div class="container">
       <header class="page-header">
         <div class="webstudio">
-          <a href="./index-mobile.html" class="web">WEB</a>
-          <a href="./index-mobile.html" class="studio">STUDIO</a>
+          <a href="./index.html" class="web">WEB</a>
+          <a href="./index.html" class="studio">STUDIO</a>
         </div>
 
-        <div class="mobile-menu-icon">
+        <label class="mobile-menu-icon">
           <svg class="icon-hamburger">
             <use
               xlink:href="./images/symbol-defs-mobile-menu.svg#icon-hamburger"
             ></use>
           </svg>
-        </div>
+        </label>
 
         <ul class="menu">
           <li class="itembar">
-            <a href="./index-tablet.html" class="link">Studio</a>
+            <a href="#" class="link">Studio</a>
           </li>
           <li class="itembar">
             <a href="#" class="link">Portfolio</a>
@@ -882,6 +883,7 @@
         </div>
 
         <div class="subscribe">
+          <form>
           <p class="subscribe-text">Subscribe</p>
           <div class="email-button-area">
             <label class="subscribe-label" name="user-email">
@@ -905,6 +907,7 @@
               </div>
             </button>
           </div>
+          </form>
         </div>
       </footer>
     </div>

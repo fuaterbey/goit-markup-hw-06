@@ -324,14 +324,17 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
 
 .mobile-menu {
 
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #FFF;
     z-index: 2;
-    width: auto;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     visibility: hidden;
 }
 
-.mobile-menu-toggle:checked .mobile-menu {
+.mobile-menu-toggle:checked ~ .mobile-menu {
 
     visibility: visible;
 
