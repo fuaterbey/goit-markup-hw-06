@@ -328,10 +328,10 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
     top: 0px;
     left: 0px;
     background-color: #FFF;
-    z-index: 2;
+    z-index: 3;
     width: 100vw;
     height: 100vh;
-    visibility: hidden;
+    visibility: hidden; 
 }
 
 .mobile-menu-toggle:checked ~ .mobile-menu {
@@ -374,14 +374,14 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
 
 .menu-close:hover {
     background-color: rgba(64, 75, 191, 1);
-    transition-duration: 250ms;
+    transition-duration: 25ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .menu-close:hover .close-mobile-menu {
     fill: white;
-    transition-duration: 250ms;
+    transition-duration: 25ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -434,8 +434,17 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 0.02em;
+    letter-spacing: 2%;
     font-style: normal;
+    text-decoration: none;
+
+    color: rgba(67, 68, 85, 1);    
+
+}
+
+.mobile-menu-link:hover {
+
+    color: rgba(64, 75, 191, 1);
 
 }
 
@@ -503,6 +512,8 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
 
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
 
 }
 
@@ -1109,7 +1120,7 @@ footer {
         visibility: hidden;
     }
 
-    .mobile-menu-toggle:checked .mobile-menu {
+    .mobile-menu-toggle:checked~.mobile-menu {
         display: none;
         visibility: visible;
 
@@ -1151,7 +1162,7 @@ footer {
     .menu-close:hover {
         display: none;
         background-color: rgba(64, 75, 191, 1);
-        transition-duration: 250ms;
+        transition-duration: 25ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     }
@@ -1159,7 +1170,7 @@ footer {
     .menu-close:hover .close-mobile-menu {
         display: none;
         fill: white;
-        transition-duration: 250ms;
+        transition-duration: 25ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -1214,9 +1225,18 @@ footer {
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
-        letter-spacing: 0.02em;
+        letter-spacing: 2%;
         font-style: normal;
-
+        text-decoration: none;
+    
+        color: rgba(67, 68, 85, 1);
+    
+    }
+    
+    .mobile-menu-link:hover {
+        display: none;
+        color: rgba(64, 75, 191, 1);
+    
     }
 
     .social-icons-mobile-menu {
@@ -1281,6 +1301,8 @@ footer {
 
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
 
 }
 
@@ -1916,10 +1938,9 @@ footer {
         visibility: hidden;
     }
 
-    .mobile-menu-toggle:checked .mobile-menu {
+    .mobile-menu-toggle:checked~.mobile-menu {
         display: none;
         visibility: visible;
-
     }
 
     .mobile-menu-toggle {
@@ -1957,7 +1978,7 @@ footer {
     .menu-close:hover {
         display: none;
         background-color: rgba(64, 75, 191, 1);
-        transition-duration: 250ms;
+        transition-duration: 25ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     }
@@ -1965,7 +1986,7 @@ footer {
     .menu-close:hover .close-mobile-menu {
         display: none;
         fill: white;
-        transition-duration: 250ms;
+        transition-duration: 25ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -2020,9 +2041,18 @@ footer {
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
-        letter-spacing: 0.02em;
+        letter-spacing: 2%;
         font-style: normal;
-
+        text-decoration: none;
+    
+        color: rgba(67, 68, 85, 1);
+    
+    }
+    
+    .mobile-menu-link:hover {
+        display: none;
+        color: rgba(64, 75, 191, 1);
+    
     }
 
     .social-icons-mobile-menu {
@@ -2050,8 +2080,8 @@ footer {
       
     display: flex;
     gap: 0px;
-    padding: 24px 156px;
-    justify-content:left ;
+    padding: 24px 0px;
+    justify-content: center ;
     background-color: #FFFFFF;
     border-bottom: 1px solid #E7E9FC;
     
@@ -2092,6 +2122,8 @@ footer {
 
      align-items: center;
      justify-content: center;
+
+    cursor: pointer;
 
  }
 
@@ -2235,7 +2267,7 @@ button {
 }
 
 .section {
-    padding: 120px 156px;
+    padding: 120px 0px;
 }
 
 .secondsection .subjects {
@@ -2243,6 +2275,7 @@ button {
     flex-direction: row;
     gap: 24px;
     list-style: none;
+    justify-content: center;
 }
 
 .item {
@@ -2313,6 +2346,8 @@ h2 {
     display: flex;
     list-style: none;
     gap: 24px;
+
+    justify-content: center;
 }
 
 .ourteam .card {
@@ -2392,6 +2427,9 @@ h2 {
     flex-wrap: wrap;
     list-style: none;
     gap: 24px;      
+
+    justify-content: center;
+
 }
 
 .card2 {
@@ -2472,10 +2510,12 @@ footer {
     display: flex;
     flex-direction: row;
     background-color: #2E2F42;
-    padding: 100px 120px 100px 156px;
+    padding: 100px 0px 100px 156px;
     gap: 16px;
 
     height: 312px;
+
+    justify-content: center;
    }
 
 .webstudio2 {
