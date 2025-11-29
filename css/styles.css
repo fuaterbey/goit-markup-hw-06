@@ -334,20 +334,18 @@ SADECE ICON ÜZERİNE GELİNDİĞİNDE ARKA FON'LA BİRLİKTE DEĞİŞİM İSTİ
     visibility: hidden; 
 }
 
-.mobile-menu-toggle:checked ~ .mobile-menu {
+.box-of-icons {
+
+    width: 40px;
+    height: 40px;
+}
+
+.box-of-icons:checked ~ .mobile-menu {
 
     visibility: visible;
 
 }
 
-.mobile-menu-toggle {
-
-    background-color: white;
-    padding: 24px 24px;
-    border-radius: 4px;
-    width: 408px;
-    height: 584px;
-}
 
 .menu-close {
     display: flex;
@@ -2489,7 +2487,6 @@ h2 {
     border-width: 0px 1px 1px 1px;
     border-style: solid;
     border-color: #E7E9FC;
-
 
 }
 
